@@ -1,0 +1,54 @@
+.container-landing {
+    display: flex;
+    align-items: center;
+    background-image: url("../../media/Vector.png");
+    height: 100vh;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.content-landing {
+    margin-left: 150px;
+    width: 470px;
+   /*  background-color: red; */
+}
+
+.container-landing p {
+    margin-left: 30px;
+    font-size: 20px;
+    margin-top: -80px;
+    margin-bottom: 45px;
+}
+
+.content-landing img {
+    width: 450px;
+    margin-top: -50px;
+
+}
+
+.btnSignIn{
+
+    background-color:#D60000 ;
+    border: none;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-left: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.btnSignUp{
+ background-color:#cdcdcdb2 70%;
+ border: none;
+ color:black;
+ padding: 10px 50px;
+ border-radius: 5px;
+ margin-right: 20px;
+ margin-left: 30px;
+ font-size: 20px;
+ cursor: pointer;
+}

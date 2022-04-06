@@ -1,0 +1,95 @@
+.container-addbook{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    padding-left:223px ;
+    padding-right:223px;
+    padding-top: 30px;
+    /* align-items: center; */
+    justify-items: center;
+/*     background-color: aqua; */
+}
+
+.attactfile{
+    display: flex;
+    flex-direction: row;
+}
+
+.container-addbook h1{
+    margin-bottom: 50px;
+ }
+
+ .add-file {
+     /* width: 100%; */
+     
+     padding-top: 40px;
+     padding-bottom: 40px;
+     margin-right: 5px;
+ }
+
+.add-file label {
+     background-color: #D2D2D240;
+     padding: 10px;
+     border-radius: 5px;
+     cursor: pointer;
+     font-size: 18px;
+     /* font-weight: bold; */
+     color: #D2D2D240 25%;
+ }
+
+ .add-file input {
+     display: none;
+     margin-right: 5px;
+ }
+
+ .add-file img{
+     margin-left: 5px;
+ }
+
+ .add-image-file {
+     padding-top: 40px;
+     padding-bottom: 40px;
+     margin-right: 10px;
+     
+    
+ }
+
+ .add-image-file input {
+     display: none;
+     margin-right: 5px;
+ }
+
+ .add-image-file img {
+     margin-left: 5px;
+ }
+
+ .add-image-file label {
+     background-color: #D2D2D240;
+     padding: 10px;
+     border-radius: 5px;
+     cursor: pointer;
+     font-size: 18px;
+     /* font-weight: bold; */
+     color: #D2D2D240 25%;
+ }
+
+ .add-book{
+     display: flex;
+     flex-direction: row-reverse;
+     /* background-color: blue; */
+     margin-bottom: 50px;
+ }
+
+ .add-book button{
+     padding: 10px 15px;
+     background-color: red;
+     border-radius: 5px;
+     border: none;
+     font-size: 18px;
+     color: white;
+ }
+
+ .add-book img{
+     margin-left: 5px;
+ }

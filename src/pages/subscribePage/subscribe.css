@@ -1,0 +1,14 @@
+.subscribe{
+    display: flex;
+    background-color: #E5E5E5;
+
+}
+
+.subscribeLeft{
+    flex: 20%;
+}
+
+.subscribeRight{
+    flex: 80%;
+    /* background-color: blue; */
+}

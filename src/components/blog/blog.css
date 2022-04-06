@@ -1,0 +1,44 @@
+.containerBlog {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.picture{
+/* background-color: rgb(240, 79, 29); */
+width: 100%;
+}
+
+.picture img {
+    margin: auto;
+    display: flex;
+  /* align-items: center; */
+ /*   background-color: beige; */
+    
+}
+
+
+.list {
+    display: flex;
+    flex-direction: row;
+    /* background-color: blue; */
+    justify-content: space-evenly;
+
+}
+
+.listBook{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.labelListbook{
+/* background-color: brown; */
+margin-bottom: 20px;
+
+
+}
+
+.labelListbook h1 {
+    display: flex;
+    margin-left: 40px;
+}

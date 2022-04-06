@@ -1,0 +1,15 @@
+.afterLogin {
+    display: flex;
+    background-color: #E5E5E5;
+    
+    
+}
+
+.afterLoginLeft {
+    flex: 20%;
+}
+
+.afterLoginRight {
+    flex: 80%;
+    
+}

@@ -1,0 +1,19 @@
+.drop .dropdown-toggle::after {
+    display: none !important;
+ 
+}
+
+.drop .dropdown-toggle:hover {
+    box-shadow: none;
+
+}
+
+.drop .icon img {
+    width: 20%;
+    margin-right: 5px;
+}
+
+
+/* .drop .btn-primary {
+    background-color: none;
+} */

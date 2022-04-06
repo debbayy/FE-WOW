@@ -1,0 +1,218 @@
+.containerProfile{
+    padding: 20px;
+   
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.profile img {
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    padding: 10px;
+
+
+}
+
+.profile h1{
+   padding: 5px;
+
+}
+
+
+.icon {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.icon img{
+    width: 30px;
+    margin-right: 10px  ;
+}
+
+.profile p{
+display: flex;
+flex-direction: row;
+   
+   font-size: 20px;
+   font-weight: bold;
+   align-items: center;
+}
+
+/* ================detail profile============== */
+
+.profile-Detail{
+display: flex;
+flex-direction: row;
+/* background-color: rebeccapurple; */
+margin-top: 50px;
+margin-bottom: 50px;
+}
+
+.profile-Detail img {
+    width:400px;
+}
+
+.profile-Detail .booksDetaiL {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    width: 100%;
+    /* background-color: red; */
+    
+}
+
+.booksDetaiL h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 65px;
+}
+
+.booksDetaiL label {
+   font-size: 24px;
+   margin-bottom: 50px;
+}
+.booksDetaiL h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.booksDetaiL p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.profile-Content{
+    display: flex;
+    flex-direction: column;
+  /*   background-color: violet; */
+}
+
+.profile-Content h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 27px;
+    margin-top: 10px;
+}
+
+.profile-Content p {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.profile-Content .btn-option{
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0px 20px 0;
+    margin: 50px 0px 50px;
+}
+
+.profile-Content .btn-option  button{
+   background-color: #D60000;
+   padding: 10px 20px;
+   border: none;
+   margin-left: 20px;
+   border-radius: 5px;
+   color: white;
+}
+
+.profile-Content .btn-option button img{
+    margin-left: 10px;
+    width:10px;
+}
+
+/* =====Profileactive===== */
+
+.container-active{
+    margin-top: 50px;
+}
+
+.container-active h1 {
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+}
+
+.container-address {
+    background-color: #FFD9D9;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    border-radius: 10px;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.detail-address{
+    display: flex;
+    align-items: center;
+   /*  background-color: red; */
+}
+
+.icon-address{
+    display: flex;
+    
+    width: 30px;
+
+    margin-right: 20px  ;
+}
+
+.detail-address  {
+    margin-right: 20px;
+}
+
+.detail-address p{
+    font-size: 12px;
+    /* background-color: aliceblue; */
+    
+}
+
+.detail-address h3 {
+    padding-top: 20px;
+    font-size: 14px;
+   /*  background-color: #D60000; */
+}
+
+/* .address{
+   // background-color: aqua; 
+} */
+
+.photo-Profile{
+ display: flex;
+ flex-direction: column;
+padding: 20px;
+ justify-content: space-between;
+/*  background-color: red; */
+ /* justify-items: space-between; */
+
+}
+
+.photo-Profile img{ 
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    padding-top: -5;
+    border-radius: 5px;
+   /*  margin-bottom: 20px; */
+}
+
+.photo-Profile button {
+    background-color: #D60000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0px 10px 0px ;
+    color: #ffffff;
+    font-size: 18px ;
+
+}
