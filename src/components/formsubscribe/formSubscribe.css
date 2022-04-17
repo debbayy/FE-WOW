@@ -55,7 +55,7 @@
 .containerForm input{
     width: 100%;
     padding: 5px;   
-    border-radius: 5px;
+    border-radius: 20px;
     margin-bottom: 10px;
     align-items: center;
     border-color:rgb(209, 209, 209);
@@ -71,7 +71,7 @@
     justify-content: space-between; 
     padding: 3px 5px 3px 5px;
     border: 2px solid grey;
-    border-radius: 5px;
+    border-radius: 20px;
     background-color: #E5E5E5;
     margin-bottom: 20px;
     color: red;
@@ -81,7 +81,7 @@
 
 .containerForm button {
     background-color: #D60000;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 5px;
     color: white;
     border: none;
@@ -89,8 +89,9 @@
 
 
 .containerForm button:hover {
-    background-color: blue;
-    border-radius: 5px;
-    color: white;
-    border: none;
-}
+    background-color:rgb(241, 239, 239);
+    border-radius: 20px;
+    
+    color: #D60000;
+    font-weight: bold;
+   }

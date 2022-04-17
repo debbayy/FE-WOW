@@ -5,8 +5,10 @@ import "./subscribe.css";
 function Subscribe() {
   return (
     <div className="subscribe">
-      <div className="subscribeLeft">
-        <Profile />
+      <div className="afterLoginLeft position-relative">
+        <div className="position-fixed">
+          <Profile />
+        </div>
       </div>
       <div className="subscribeRight">
         <FormSubscribe />

@@ -16,10 +16,10 @@ function ProfileActive() {
     navigate("/detailbook");
   }
   return (
-    <div className="container-active">
-      <h1>Profile</h1>
+    <div className="container-active ms-5 ps-5">
+      <h1 className=" ms-3">Profile</h1>
 
-      <div className="container-address">
+      <div className="container-address ms-3">
         <div className="address">
           <div className="detail-address">
             <img className="icon-address" src={IconEmail} alt="" />
@@ -57,7 +57,7 @@ function ProfileActive() {
           <button>Edit Profile</button>
         </div>
       </div>
-      <div style={{ marginTop: "68px" }}>
+      <div className=" ms-3" style={{ marginTop: "68px" }}>
         <h1>My List Book</h1>
         <img
           onClick={handleListBook}

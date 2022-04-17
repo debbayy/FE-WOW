@@ -29,9 +29,9 @@ function Blog() {
     setShowModal(true);
   };
 
-  function hendleShow() {
-    navigate("/detailProfile");
-  }
+  // function hendleShow() {
+  //   navigate("/detailProfile");
+  // }
 
   function closeShow() {
     setShowModal(false);
@@ -56,12 +56,12 @@ function Blog() {
     }
   };
 
-  const handleshow = () => {
-    dispacth({
-      type: "SHOW_MODAL",
-      payload: { show: true },
-    });
-  };
+  // const handleshow = () => {
+  //   dispacth({
+  //     type: "SHOW_MODAL",
+  //     payload: { show: true },
+  //   });
+  // };
 
   useEffect(() => {
     getBooks();
@@ -69,7 +69,7 @@ function Blog() {
 
   console.log(show);
   return (
-    <div className="pageBar row">
+    <div className="pageBar row container">
       <Modal
         className="d-flex align-items-center "
         show={showModal}
@@ -87,37 +87,35 @@ function Blog() {
         <div className="picture">
           <img src={BlogImage} alt="" srcset="" />
         </div>
-        <div className="labelListbook">
+        <div className="ms-3 my-3">
           <h1>List Book</h1>
         </div>
 
-        <div className=" mx-3 row d-flex">
+        <div className="d-flex mx-2 row ">
           {book.map((item) => {
             return (
-              <div className="  col-3 text-start square">
+              <div className="col-3 bg-info text-start">
                 {state.user.isSub === "false" ? (
                   <>
                     <div style={{ cursor: "pointer" }} onClick={openModal}>
                       {showModal ? <Modal setShowModal={setShowModal} /> : null}
                       <img className="d-flex" src={item.image} alt="" />
-
-                      <h3>{item.title.slice(0, 5) + "..."}</h3>
+                      <h4>{item.title.slice(0, 5) + "..."}</h4>
                       <p>{item.about.slice(0, 15) + "...."}</p>
                     </div>
                   </>
                 ) : (
                   <>
                     <div
-                      className="  col-3 text-start square"
+                      className="col-3 text-start"
                       style={{ cursor: "pointer" }}
                       onClick={() => {
                         navigate(`/detailbook/${item.id}`);
                       }}
                     >
                       <img className="d-flex" src={item.image} alt="" />
-
-                      <h3>{item.title}</h3>
-                      <p>{item.about.slice(0, 15) + "...."}</p>
+                      <h4>{item.title.slice(0, 6) + ".."}</h4>
+                      <p>{item.author.slice(0, 7) + "."}</p>
                     </div>
                   </>
                 )}

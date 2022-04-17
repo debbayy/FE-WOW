@@ -53,8 +53,8 @@ function ProfilPage() {
   }, []);
 
   return (
-    <div className="containerProfile">
-      <div className="profile-Detail">
+    <div className="containerProfile mx-5 px-5 ">
+      <div className="profile-Detail mx-3">
         <div>
           <img src={book.image} alt="" />
         </div>
@@ -70,7 +70,7 @@ function ProfilPage() {
         </div>
       </div>
 
-      <div className="profile-Content">
+      <div className="profile-Content mx-3">
         <h3>About This Book</h3>
         <p>{book.about}</p>
         <div className="btn-option">

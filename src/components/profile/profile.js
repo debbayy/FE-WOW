@@ -114,7 +114,7 @@ function Profile() {
           </>
         ) : (
           <>
-            <div className="icon" style={{ cursor: "pointer" }}>
+            <div className="icon hoverProvile" style={{ cursor: "pointer" }}>
               <div>
                 <p>
                   <img src={IconUser} />

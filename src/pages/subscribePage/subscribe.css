@@ -5,10 +5,10 @@
 }
 
 .subscribeLeft{
-    flex: 20%;
+    flex: 15%;
 }
 
 .subscribeRight{
-    flex: 80%;
+    flex: 85%;
     /* background-color: blue; */
 }
