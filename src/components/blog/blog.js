@@ -29,10 +29,6 @@ function Blog() {
     setShowModal(true);
   };
 
-  // function hendleShow() {
-  //   navigate("/detailProfile");
-  // }
-
   function closeShow() {
     setShowModal(false);
   }
@@ -94,7 +90,7 @@ function Blog() {
         <div className="d-flex mx-2 row ">
           {book.map((item) => {
             return (
-              <div className="col-3 bg-info text-start">
+              <div className="col-3  text-start">
                 {state.user.isSub === "false" ? (
                   <>
                     <div style={{ cursor: "pointer" }} onClick={openModal}>

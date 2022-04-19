@@ -12,17 +12,75 @@ function Transaction() {
   const [action, setAction] = useState(false);
   const [state, dispatch] = useContext(UserContextToken);
 
+  const [detailTrans, setDetailTrans] = useState({
+    userStatus: "Active",
+    remainingActive: 30,
+    paymentStatus: "Approve",
+  });
+
+  const [cancel, setCancel] = useState({
+    userStatus: "",
+    remainingActive: 0,
+    paymentStatus: "Cancel",
+  });
+
   const getTransaction = async () => {
     try {
       const response = await API.get("/transactions");
       setTrans(response.data.data.transaction);
-      console.log(response.data.data.transaction);
     } catch (error) {
       console.log(error);
     }
   };
 
-  const handleApprove = async (id) => {
+  // const handleApprove = async (id) => {
+  //   try {
+  //     const config = {
+  //       headers: {
+  //         "Content-type": "application/json",
+  //       },
+  //     };
+
+  //     await API.patch(`/transaction/${id}`, approve, config);
+
+  //     const gettras = await API.get(`/transaction/${id}`);
+  //     console.log(gettras);
+
+  //     let appSub = {
+  //       isSub: "true",
+  //     };
+
+  //     const updateUser = await API.patch(
+  //       `/user/${gettras.data.data.user.user.id}`,
+  //       appSub,
+  //       config
+  //     );
+  //     console.log(id);
+
+  //     console.log(updateUser);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  //   setAction(!action);
+  // };
+
+  // const handleCancel = async (id) => {
+  //   try {
+  //     const config = {
+  //       headers: {
+  //         "Content-type": "application/json",
+  //       },
+  //     };
+
+  //     const res = await API.patch(`/transaction/${id}`, cancel, config);
+
+  //     console.log(res);
+  //     setAction(!action);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+  const handleApprove = async (id, idUser) => {
     try {
       const config = {
         headers: {
@@ -30,31 +88,23 @@ function Transaction() {
         },
       };
 
-      let approve = {
+      setDetailTrans({
+        userStatus: "active",
+        // timeApprove: new Date(),
+        remainingActive: 30,
         paymentStatus: "Approve",
-      };
+      });
 
-      await API.patch(`/transaction/${id}`, approve, config);
-
-      const gettras = await API.get(`/transaction/${id}`);
-      console.log(gettras);
-
-      let appSub = {
-        isSub: "true",
-      };
-
-      const updateUser = await API.patch(
-        `/user/${gettras.data.data.user.user.id}`,
-        appSub,
+      const response = await API.patch(
+        `/transaction/${id}`,
+        detailTrans,
         config
       );
-      console.log(id);
 
-      console.log(updateUser);
+      getTransaction();
     } catch (error) {
       console.log(error);
     }
-    setAction(!action);
   };
 
   const handleCancel = async (id) => {
@@ -65,18 +115,15 @@ function Transaction() {
         },
       };
 
-      let cancel = {
-        paymentStatus: "Cancel",
-      };
-
-      const res = await API.patch(`/transaction/${id}`, cancel, config);
-
-      console.log(res);
-      setAction(!action);
+      const response = await API.patch(`/transaction/${id}`, cancel, config);
+      console.log(response);
+      getTransaction();
+      // Navigate("/listtrans");
     } catch (error) {
       console.log(error);
     }
   };
+
   useEffect(() => {
     getTransaction();
   }, [action]);
@@ -121,7 +168,8 @@ function Transaction() {
                     {item.transferProof}
                   </a>
                 </td>
-                <td>{item.remainingActive}</td>
+                <td>{item.remainingActive}/Hari</td>
+
                 <td className="fw-bold">
                   {item.userStatus === "not Actived" ? (
                     <span className="text-danger fw-bold"> Not Active</span>
@@ -131,13 +179,14 @@ function Transaction() {
                     <span className="text-danger fw-bold">Not Active</span>
                   )}
                 </td>
+
                 <td>
                   {item.paymentStatus === "Approve" ? (
                     <span className="text-success fw-bold">Approve</span>
                   ) : item.paymentStatus === "pending" ? (
                     <span className="text-warning fw-bold">Panding</span>
                   ) : (
-                    <span className="text-danger fw-bold">cancel</span>
+                    <span className="text-danger fw-bold">Cancel</span>
                   )}
                 </td>
                 <td>

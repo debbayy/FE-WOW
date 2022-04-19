@@ -18,7 +18,9 @@ import Swal from "sweetalert2";
 
 function FormSubscribe() {
   const navigate = useNavigate();
+  const [show, setShow] = useState(false);
   const [state, dispatch] = useContext(ShowModalContext);
+  const [showModal, setShowModal] = useState(false);
   const [message, setMessage] = useState(null);
 
   const [form, setForm] = useState({
@@ -39,7 +41,13 @@ function FormSubscribe() {
       // setPreview(url);
     }
   };
+  const openModal = () => {
+    setShowModal(true);
+  };
 
+  function closeShow() {
+    setShowModal(false);
+  }
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
@@ -55,13 +63,10 @@ function FormSubscribe() {
 
       const response = await API.post("/transaction", formData, config);
 
-      console.log(response);
+      // console.log(response);
+
       if (response.status === 200) {
-        Swal.fire(
-          "Success...",
-          "Wait for admin to comfirm your subscribe",
-          "success"
-        );
+        openModal();
       } else {
         Swal.fire({
           icon: "error",
@@ -69,15 +74,6 @@ function FormSubscribe() {
           text: "Something went wrong!",
         });
       }
-      // dispatch({
-      //   type: "UPDATE",
-      // });
-      // dispatch({
-      //   type: "SUBSCRIBE",
-      //   payload: false,
-      // });
-      // setModalShow(true);
-      // setSubscribe(response.data.data);
     } catch (error) {
       Swal.fire({
         icon: "error",
@@ -88,11 +84,17 @@ function FormSubscribe() {
     }
   };
 
+  console.log(show);
+
   return (
     <>
-      <Modal>
+      <Modal
+        className="d-flex align-items-center "
+        show={showModal}
+        onHide={closeShow}
+      >
         <Form>
-          <Form.Group className="mb-3 text-center my-2 ">
+          <Form.Group className="mb-3 text-center my-2">
             <Form.Label className="text-success text-xl-center fw-bold my-3 ">
               Thank you for subscribing to premium, your premium package will be
               active after our admin approves your transaction, thank you
